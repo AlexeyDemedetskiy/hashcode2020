@@ -12,7 +12,7 @@ struct TailSolver: Solver {
     func solve(problem: Problem) -> Solution {
         var isSolving = true;
         var index = problem.pizzas.count - 1;
-        var accumulator: UInt = 0;
+        var accumulator: UInt64 = 0;
         var results: [PizzaIndex] = []
         
         while (isSolving) {
