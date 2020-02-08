@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "problems">
+      <FileRef
+         location = "group:a_example.in">
+      </FileRef>
+      <FileRef
+         location = "group:b_small.in">
+      </FileRef>
+      <FileRef
+         location = "group:c_medium.in">
+      </FileRef>
+      <FileRef
+         location = "group:d_quite_big.in">
+      </FileRef>
+      <FileRef
+         location = "group:e_also_big.in">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:practice_problem.pdf">
+   </FileRef>
    <FileRef
       location = "group:Runner/../Solver/Solver.xcodeproj">
    </FileRef>
