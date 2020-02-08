@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50346ADF23EEE233003F849B /* ProblemReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50346ADE23EEE233003F849B /* ProblemReader.swift */; };
 		50346AE123EEE335003F849B /* ProblemReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50346AE023EEE335003F849B /* ProblemReaderTests.swift */; };
+		50346AE923EEEE0E003F849B /* e_also_big.in in Resources */ = {isa = PBXBuildFile; fileRef = 50346AE723EEECF0003F849B /* e_also_big.in */; };
 		DE1AAFCB23EEDD18007980CF /* Solver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1AAFC123EEDD18007980CF /* Solver.framework */; };
 		DE1AAFD023EEDD18007980CF /* SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFCF23EEDD18007980CF /* SolverTests.swift */; };
 		DE1AAFD223EEDD18007980CF /* Solver.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1AAFC423EEDD18007980CF /* Solver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		50346ADE23EEE233003F849B /* ProblemReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemReader.swift; sourceTree = "<group>"; };
 		50346AE023EEE335003F849B /* ProblemReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemReaderTests.swift; sourceTree = "<group>"; };
+		50346AE723EEECF0003F849B /* e_also_big.in */ = {isa = PBXFileReference; lastKnownFileType = text; name = e_also_big.in; path = ../Problems/e_also_big.in; sourceTree = "<group>"; };
 		DE1AAFC123EEDD18007980CF /* Solver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Solver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1AAFC423EEDD18007980CF /* Solver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver.h; sourceTree = "<group>"; };
 		DE1AAFC523EEDD18007980CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1AAFEE23EEECA2007980CF /* d_quite_big.in */,
+				50346AE723EEECF0003F849B /* e_also_big.in */,
 				DE1AAFC323EEDD18007980CF /* Solver */,
 				DE1AAFCE23EEDD18007980CF /* SolverTests */,
 				DE1AAFC223EEDD18007980CF /* Products */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE1AAFEF23EEECA2007980CF /* d_quite_big.in in Resources */,
+				50346AE923EEEE0E003F849B /* e_also_big.in in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
