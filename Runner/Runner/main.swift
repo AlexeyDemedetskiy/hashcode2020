@@ -23,7 +23,6 @@ class Runner {
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            try run(problem: problem, name: name, solver: NopSolver())
             try run(problem: problem, name: name, solver: HeadSolver())
             try run(problem: problem, name: name, solver: TailSolver())
         }
