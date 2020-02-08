@@ -11,9 +11,13 @@ import XCTest
 
 class ProblemReaderTests: XCTestCase {
     func testEmpty() throws {
-        let sut = try Solver.read(file: "a_example", bundle: Bundle(for: type(of: self)))
-        XCTAssertEqual(sut.maximumNumberOfSlices, 0)
-        XCTAssertEqual(sut.numberOfPizzeTypes, 0)
-        XCTAssertEqual(sut.pizzas.count, 0)
+        let input = """
+        17 4
+        2 5 6 8
+        """
+        let sut = try Solver.parse(input)
+        XCTAssertEqual(sut.maximumNumberOfSlices, 17)
+        XCTAssertEqual(sut.numberOfPizzeTypes, 4)
+        XCTAssertEqual(sut.pizzas.count, 4)
     }
 }

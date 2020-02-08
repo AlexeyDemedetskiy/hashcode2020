@@ -18,9 +18,14 @@ struct Pizza {
     let numberOfSlices: UInt
 }
 
-func parse(input: String) throws -> Problem {
+
+func parse(_ input: String) throws -> Problem {
     let lines = input.components(separatedBy: .newlines)
-//    let  lines[0].components(separatedBy: .whitespaces)
+    let defs = lines[0].components(separatedBy: .whitespaces)
+    let pizzas = lines[1].components(separatedBy: .whitespaces)
+
     
-    return Problem(maximumNumberOfSlices: 0, numberOfPizzeTypes: 0, pizzas: []);
+    return Problem(maximumNumberOfSlices: UInt(defs[0])!,
+                   numberOfPizzeTypes: UInt(defs[1])!,
+                   pizzas: pizzas.map({ e in return Pizza(numberOfSlices: UInt(e)!) }))
 }
