@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:Solutions">
+   </FileRef>
    <Group
       location = "group:Problems"
       name = "Problems">
@@ -19,10 +22,6 @@
       <FileRef
          location = "group:a_example.in">
       </FileRef>
-   </Group>
-   <Group
-      location = "group:Solutions"
-      name = "Solutions">
    </Group>
    <FileRef
       location = "group:practice_problem.pdf">
