@@ -18,6 +18,10 @@ class ProblemReaderTests: XCTestCase {
         let sut = try Solver.parse(input)
         XCTAssertEqual(sut.maximumNumberOfSlices, 17)
         XCTAssertEqual(sut.numberOfPizzeTypes, 4)
+        XCTAssertEqual(sut.pizzas[0].numberOfSlices, 2)
+        XCTAssertEqual(sut.pizzas[1].numberOfSlices, 5)
+        XCTAssertEqual(sut.pizzas[2].numberOfSlices, 6)
+        XCTAssertEqual(sut.pizzas[3].numberOfSlices, 8)
         XCTAssertEqual(sut.pizzas.count, 4)
     }
 }
