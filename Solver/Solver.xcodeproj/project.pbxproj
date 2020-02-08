@@ -16,6 +16,8 @@
 		DE1AAFE723EEE3FA007980CF /* SolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFE623EEE3FA007980CF /* SolutionTests.swift */; };
 		DE1AAFE923EEE803007980CF /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFE823EEE803007980CF /* Solver.swift */; };
 		DE1AAFEB23EEE9C6007980CF /* HeadSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */; };
+		DE1AAFED23EEEB8F007980CF /* HeadSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFEC23EEEB8F007980CF /* HeadSolverTests.swift */; };
+		DE1AAFEF23EEECA2007980CF /* d_quite_big.in in Resources */ = {isa = PBXBuildFile; fileRef = DE1AAFEE23EEECA2007980CF /* d_quite_big.in */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		DE1AAFE623EEE3FA007980CF /* SolutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionTests.swift; sourceTree = "<group>"; };
 		DE1AAFE823EEE803007980CF /* Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 		DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSolver.swift; sourceTree = "<group>"; };
+		DE1AAFEC23EEEB8F007980CF /* HeadSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSolverTests.swift; sourceTree = "<group>"; };
+		DE1AAFEE23EEECA2007980CF /* d_quite_big.in */ = {isa = PBXFileReference; lastKnownFileType = text; name = d_quite_big.in; path = ../Problems/d_quite_big.in; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 		DE1AAFB723EEDD18007980CF = {
 			isa = PBXGroup;
 			children = (
+				DE1AAFEE23EEECA2007980CF /* d_quite_big.in */,
 				DE1AAFC323EEDD18007980CF /* Solver */,
 				DE1AAFCE23EEDD18007980CF /* SolverTests */,
 				DE1AAFC223EEDD18007980CF /* Products */,
@@ -100,6 +105,7 @@
 				DE1AAFD123EEDD18007980CF /* Info.plist */,
 				DE1AAFE623EEE3FA007980CF /* SolutionTests.swift */,
 				50346AE023EEE335003F849B /* ProblemReaderTests.swift */,
+				DE1AAFEC23EEEB8F007980CF /* HeadSolverTests.swift */,
 			);
 			path = SolverTests;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1AAFEF23EEECA2007980CF /* d_quite_big.in in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1AAFED23EEEB8F007980CF /* HeadSolverTests.swift in Sources */,
 				DE1AAFE723EEE3FA007980CF /* SolutionTests.swift in Sources */,
 				50346AE123EEE335003F849B /* ProblemReaderTests.swift in Sources */,
 				DE1AAFD023EEDD18007980CF /* SolverTests.swift in Sources */,
