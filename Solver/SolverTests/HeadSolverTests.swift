@@ -25,7 +25,6 @@ class HeadSolverTests: XCTestCase {
     func testTrivialExample2() {
         let problem = Problem(
             maximumNumberOfSlices: 36,
-            numberOfPizzeTypes: 6,
             pizzas: [
                 Pizza(numberOfSlices: 2),
                 Pizza(numberOfSlices: 5),
