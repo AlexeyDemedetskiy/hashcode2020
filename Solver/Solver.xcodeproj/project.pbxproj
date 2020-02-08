@@ -14,6 +14,8 @@
 		DE1AAFD223EEDD18007980CF /* Solver.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1AAFC423EEDD18007980CF /* Solver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE1AAFE523EEE256007980CF /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFE423EEE256007980CF /* Solution.swift */; };
 		DE1AAFE723EEE3FA007980CF /* SolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFE623EEE3FA007980CF /* SolutionTests.swift */; };
+		DE1AAFE923EEE803007980CF /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFE823EEE803007980CF /* Solver.swift */; };
+		DE1AAFEB23EEE9C6007980CF /* HeadSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		DE1AAFD123EEDD18007980CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE1AAFE423EEE256007980CF /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		DE1AAFE623EEE3FA007980CF /* SolutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionTests.swift; sourceTree = "<group>"; };
+		DE1AAFE823EEE803007980CF /* Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
+		DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				50346ADE23EEE233003F849B /* ProblemReader.swift */,
 				DE1AAFC523EEDD18007980CF /* Info.plist */,
 				DE1AAFE423EEE256007980CF /* Solution.swift */,
+				DE1AAFE823EEE803007980CF /* Solver.swift */,
+				DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */,
 			);
 			path = Solver;
 			sourceTree = "<group>";
@@ -208,8 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1AAFE923EEE803007980CF /* Solver.swift in Sources */,
 				DE1AAFE523EEE256007980CF /* Solution.swift in Sources */,
 				50346ADF23EEE233003F849B /* ProblemReader.swift in Sources */,
+				DE1AAFEB23EEE9C6007980CF /* HeadSolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
