@@ -32,3 +32,4 @@ class ScorerTests: XCTestCase {
         XCTAssertEqual(correctScore, actualScore)
     }
 }
+
