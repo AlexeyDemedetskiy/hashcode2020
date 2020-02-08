@@ -15,7 +15,7 @@ struct Problem {
 }
 
 struct Pizza {
-    let numberOfSlices: UInt
+    let numberOfSlices: UInt64
 }
 
 
@@ -27,5 +27,5 @@ func parse(_ input: String) throws -> Problem {
     
     return Problem(maximumNumberOfSlices: UInt(defs[0])!,
                    numberOfPizzeTypes: UInt(defs[1])!,
-                   pizzas: pizzas.map({ e in return Pizza(numberOfSlices: UInt(e)!) }))
+                   pizzas: pizzas.map({ e in return Pizza(numberOfSlices: UInt64(e)!) }))
 }

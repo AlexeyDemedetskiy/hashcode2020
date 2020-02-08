@@ -19,6 +19,8 @@
 		DE1AAFEB23EEE9C6007980CF /* HeadSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */; };
 		DE1AAFED23EEEB8F007980CF /* HeadSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFEC23EEEB8F007980CF /* HeadSolverTests.swift */; };
 		DE1AAFEF23EEECA2007980CF /* d_quite_big.in in Resources */ = {isa = PBXBuildFile; fileRef = DE1AAFEE23EEECA2007980CF /* d_quite_big.in */; };
+		DE1AAFF123EEEFFC007980CF /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFF023EEEFFC007980CF /* Scorer.swift */; };
+		DE1AAFF323EEF04D007980CF /* ScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFF223EEF04D007980CF /* ScorerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSolver.swift; sourceTree = "<group>"; };
 		DE1AAFEC23EEEB8F007980CF /* HeadSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSolverTests.swift; sourceTree = "<group>"; };
 		DE1AAFEE23EEECA2007980CF /* d_quite_big.in */ = {isa = PBXFileReference; lastKnownFileType = text; name = d_quite_big.in; path = ../Problems/d_quite_big.in; sourceTree = "<group>"; };
+		DE1AAFF023EEEFFC007980CF /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
+		DE1AAFF223EEF04D007980CF /* ScorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				DE1AAFE423EEE256007980CF /* Solution.swift */,
 				DE1AAFE823EEE803007980CF /* Solver.swift */,
 				DE1AAFEA23EEE9C6007980CF /* HeadSolver.swift */,
+				DE1AAFF023EEEFFC007980CF /* Scorer.swift */,
+				DE1AAFF223EEF04D007980CF /* ScorerTests.swift */,
 			);
 			path = Solver;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			files = (
 				DE1AAFE923EEE803007980CF /* Solver.swift in Sources */,
 				DE1AAFE523EEE256007980CF /* Solution.swift in Sources */,
+				DE1AAFF123EEEFFC007980CF /* Scorer.swift in Sources */,
 				50346ADF23EEE233003F849B /* ProblemReader.swift in Sources */,
 				DE1AAFEB23EEE9C6007980CF /* HeadSolver.swift in Sources */,
 			);
@@ -240,6 +247,7 @@
 				DE1AAFE723EEE3FA007980CF /* SolutionTests.swift in Sources */,
 				50346AE123EEE335003F849B /* ProblemReaderTests.swift in Sources */,
 				DE1AAFD023EEDD18007980CF /* SolverTests.swift in Sources */,
+				DE1AAFF323EEF04D007980CF /* ScorerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
