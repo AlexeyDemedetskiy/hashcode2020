@@ -10,7 +10,6 @@ import Foundation
 
 struct Problem {
     let maximumNumberOfSlices: UInt
-    let numberOfPizzeTypes: UInt
     let pizzas: [Pizza]
 }
 
@@ -24,8 +23,8 @@ func parse(_ input: String) throws -> Problem {
     let defs = lines[0].components(separatedBy: .whitespaces)
     let pizzas = lines[1].components(separatedBy: .whitespaces)
 
+    guard pizzas.count == UInt(defs[1])! else { fatalError() }
     
     return Problem(maximumNumberOfSlices: UInt(defs[0])!,
-                   numberOfPizzeTypes: UInt(defs[1])!,
                    pizzas: pizzas.map({ e in return Pizza(numberOfSlices: UInt64(e)!) }))
 }
