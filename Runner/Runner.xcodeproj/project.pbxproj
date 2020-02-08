@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE1AAFB123EEDCEC007980CF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFB023EEDCEC007980CF /* main.swift */; };
+		DE5078A823EF24570021C850 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5078A723EF24570021C850 /* main.swift */; };
 		E2CE034E23EEFA1C0001608F /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE034D23EEFA1C0001608F /* Reader.swift */; };
 		E2CE035023EEFA3D0001608F /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE034F23EEFA3D0001608F /* Writer.swift */; };
 		E2CE035323EF01D20001608F /* Solver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2CE035223EF01D20001608F /* Solver.framework */; };
@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		DE1AAFAD23EEDCEC007980CF /* Runner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Runner; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE1AAFB023EEDCEC007980CF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DE5078A723EF24570021C850 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E2CE034D23EEFA1C0001608F /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
 		E2CE034F23EEFA3D0001608F /* Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
 		E2CE035223EF01D20001608F /* Solver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Solver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +77,7 @@
 		DE1AAFAF23EEDCEC007980CF /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				DE1AAFB023EEDCEC007980CF /* main.swift */,
+				DE5078A723EF24570021C850 /* main.swift */,
 				E2CE034F23EEFA3D0001608F /* Writer.swift */,
 				E2CE034D23EEFA1C0001608F /* Reader.swift */,
 			);
@@ -153,7 +153,7 @@
 			files = (
 				E2CE035023EEFA3D0001608F /* Writer.swift in Sources */,
 				E2CE034E23EEFA1C0001608F /* Reader.swift in Sources */,
-				DE1AAFB123EEDCEC007980CF /* main.swift in Sources */,
+				DE5078A823EF24570021C850 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

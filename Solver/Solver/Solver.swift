@@ -1,6 +1,6 @@
 protocol Solver {
     var name: String { get }
-    func solve(problem: Problem) -> Solution
+    func solve(problem: Problem) throws -> Solution
 }
 
 extension Solver {

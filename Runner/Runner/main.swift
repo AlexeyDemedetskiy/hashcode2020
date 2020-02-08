@@ -16,7 +16,7 @@ class Runner {
     
     func run(problem: String, name: String, solver: Solver) throws {
         let problem = try parse(problem)
-        let solution = solver.solve(problem: problem)
+        let solution = try solver.solve(problem: problem)
         let score = try Scorer.score(for: problem, with: solution)
         try writer.write(solution: solution.toString(), solverName: solver.name, score: score, problemName: name)
     }

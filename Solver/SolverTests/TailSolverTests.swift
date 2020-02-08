@@ -13,7 +13,6 @@ class TailSolverTests: XCTestCase {
     func testTrivialExample() {
         let problem = Problem(
             maximumNumberOfSlices: 17,
-            numberOfPizzeTypes: 4,
             pizzas: [
                 Pizza(numberOfSlices: 2),
                 Pizza(numberOfSlices: 5),
