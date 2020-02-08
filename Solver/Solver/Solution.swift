@@ -1,4 +1,4 @@
-typealias PizzaIndex = UInt32
+typealias PizzaIndex = Int
 
 struct Solution {
     let indices: [PizzaIndex]

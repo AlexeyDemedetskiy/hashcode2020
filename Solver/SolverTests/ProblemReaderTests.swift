@@ -17,7 +17,6 @@ class ProblemReaderTests: XCTestCase {
         """
         let sut = try parse(input)
         XCTAssertEqual(sut.maximumNumberOfSlices, 17)
-        XCTAssertEqual(sut.numberOfPizzeTypes, 4)
         XCTAssertEqual(sut.pizzas[0].numberOfSlices, 2)
         XCTAssertEqual(sut.pizzas[1].numberOfSlices, 5)
         XCTAssertEqual(sut.pizzas[2].numberOfSlices, 6)
@@ -32,7 +31,6 @@ class ProblemReaderTests: XCTestCase {
             let input = try! String(contentsOfFile: path, encoding: .utf8)
             let sut = try! parse(input)
             XCTAssertEqual(sut.maximumNumberOfSlices, 505000000)
-            XCTAssertEqual(sut.numberOfPizzeTypes, 10000)
             XCTAssertEqual(sut.pizzas.count, 10000)
         }        
     }
