@@ -9,13 +9,13 @@
 import Foundation
 
 struct SkipedReviewerSolver: Solver {
-    func solve(problem: Problem) -> Solution {
-        let res = solve(problem: problem, deep: 1)
+    func solve(problem: Problem) throws -> Solution {
+        let res = try solve(problem: problem, deep: 1)
         return Solution(indices: res.indices)
     }
     
-    func solve(problem: Problem, deep: Int) -> Solution {
-        let res = TailSolver.init().solve(problem: problem)
+    func solve(problem: Problem, deep: Int) throws -> Solution {
+        let res = try TailSolver().solve(problem: problem)
         let skippedElements = problem.pizzas.enumerated().filter { (index, _) in
             res.indices.contains(index)
         }
@@ -33,9 +33,9 @@ struct SkipedReviewerSolver: Solver {
             
             var newRes: Solution
             if deep > 0 {
-                newRes = solve(problem: newProblem, deep: deep - 1)
+                newRes = try solve(problem: newProblem, deep: deep - 1)
             } else {
-                newRes = TailSolver.init().solve(problem: newProblem)
+                newRes = try TailSolver().solve(problem: newProblem)
             }
             
             if (newRes.indices.reduce(0, +) > bestRes.indices.reduce(0, +)) {

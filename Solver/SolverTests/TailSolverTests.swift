@@ -10,7 +10,7 @@ import XCTest
 @testable import Solver
 
 class TailSolverTests: XCTestCase {
-    func testTrivialExample() {
+    func testTrivialExample() throws {
         let problem = Problem(
             maximumNumberOfSlices: 17,
             pizzas: [
@@ -24,7 +24,7 @@ class TailSolverTests: XCTestCase {
             indices: [0, 2, 3]
         )
         
-        let findedSolution = TailSolver().solve(problem: problem)
+        let findedSolution = try TailSolver().solve(problem: problem)
         
         XCTAssertEqual(findedSolution.toString(), correctSolution.toString())
     }
