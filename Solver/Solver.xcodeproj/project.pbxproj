@@ -26,6 +26,7 @@
 		DE1AAFF323EEF04D007980CF /* ScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFF223EEF04D007980CF /* ScorerTests.swift */; };
 		DE1AAFF523EEFB56007980CF /* NopSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFF423EEFB56007980CF /* NopSolver.swift */; };
 		DE1AAFF723EF14BC007980CF /* OneStepOptimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AAFF623EF14BC007980CF /* OneStepOptimizer.swift */; };
+		E2CE035723EF0EF20001608F /* TailSolverCompose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE035623EF0EF20001608F /* TailSolverCompose.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		DE1AAFF223EEF04D007980CF /* ScorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTests.swift; sourceTree = "<group>"; };
 		DE1AAFF423EEFB56007980CF /* NopSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NopSolver.swift; sourceTree = "<group>"; };
 		DE1AAFF623EF14BC007980CF /* OneStepOptimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneStepOptimizer.swift; sourceTree = "<group>"; };
+		E2CE035623EF0EF20001608F /* TailSolverCompose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailSolverCompose.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				50346AEA23EEFA8F003F849B /* TailSolver.swift */,
 				0724736623EF13B7008F2C69 /* SkipedReviewerSolver.swift */,
 				DE1AAFF623EF14BC007980CF /* OneStepOptimizer.swift */,
+				E2CE035623EF0EF20001608F /* TailSolverCompose.swift */,
 			);
 			path = Solver;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				DE1AAFE523EEE256007980CF /* Solution.swift in Sources */,
 				DE1AAFF123EEEFFC007980CF /* Scorer.swift in Sources */,
 				50346ADF23EEE233003F849B /* Problem.swift in Sources */,
+				E2CE035723EF0EF20001608F /* TailSolverCompose.swift in Sources */,
 				DE1AAFF523EEFB56007980CF /* NopSolver.swift in Sources */,
 				DE1AAFEB23EEE9C6007980CF /* HeadSolver.swift in Sources */,
 			);

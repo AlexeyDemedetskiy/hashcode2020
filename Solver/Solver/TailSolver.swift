@@ -9,9 +9,20 @@
 import Foundation
 
 struct TailSolver: Solver {
-    func solve(problem: Problem) -> Solution {
+    
+    let offset: Int
+    
+    var name: String {
+        "TailSolver(\(offset))"
+    }
+    
+    init(offset: Int = 0) {
+        self.offset = offset
+    }
+    
+    func solve(problem: Problem) throws -> Solution {
         var isSolving = true;
-        var index = problem.pizzas.count - 1;
+        var index = problem.pizzas.count - 1 - offset;
         var accumulator: UInt64 = 0;
         var results: [PizzaIndex] = []
         
@@ -26,9 +37,9 @@ struct TailSolver: Solver {
             }
             
             results.append(PizzaIndex(index))
-
+            
             accumulator = nextValue
-                
+            
             index -= 1;
         }
         return Solution(indices: results.reversed())

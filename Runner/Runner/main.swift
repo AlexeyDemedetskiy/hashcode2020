@@ -24,7 +24,7 @@ class Runner {
     func run() throws {
         for (problem, name) in try reader.read() {
             try run(problem: problem, name: name, solver: HeadSolver())
-            try run(problem: problem, name: name, solver: TailSolver())
+            try run(problem: problem, name: name, solver: TailSolverCompose())
             try run(problem: problem, name: name, solver: SkipedReviewerSolver())
         }
     }
