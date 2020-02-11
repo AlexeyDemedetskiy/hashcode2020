@@ -18,14 +18,14 @@ class Runner {
         let problem = try parse(problem)
         let solution = try solver.solve(problem: problem)
         let score = try Scorer.score(for: problem, with: solution)
-        try writer.write(solution: solution.toString(), solverName: solver.name, score: score, problemName: name)
+        try writer.write(solution: solution.toString(), solverName: solution.name, score: score, problemName: name)
     }
     
     func run() throws {
         for (problem, name) in try reader.read() {
             try run(problem: problem, name: name, solver: HeadSolver())
             try run(problem: problem, name: name, solver: TailSolverCompose())
-            try run(problem: problem, name: name, solver: SkipedReviewerSolver())
+            try run(problem: problem, name: name, solver: OptimizingSolver(solver: TailSolverCompose()))
         }
     }
 }

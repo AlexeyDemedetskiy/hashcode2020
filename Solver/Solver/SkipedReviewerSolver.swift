@@ -11,7 +11,7 @@ import Foundation
 struct SkipedReviewerSolver: Solver {
     func solve(problem: Problem) throws -> Solution {
         let res = try solve(problem: problem, deep: 1)
-        return Solution(indices: res.indices)
+        return Solution(indices: res.indices, solverWrapper: .init(solver: self))
     }
     
     func solve(problem: Problem, deep: Int) throws -> Solution {
@@ -43,6 +43,6 @@ struct SkipedReviewerSolver: Solver {
             }
         }
         
-        return Solution(indices: bestRes.indices)
+        return Solution(indices: bestRes.indices, solverWrapper: .init(solver: self))
     }
 }

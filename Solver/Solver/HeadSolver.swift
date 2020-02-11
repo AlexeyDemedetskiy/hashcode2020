@@ -12,6 +12,6 @@ struct HeadSolver: Solver {
             }
         }
         
-        return Solution(indices: indices)
+        return Solution(indices: indices, solverWrapper: .init(solver: self))
     }
 }

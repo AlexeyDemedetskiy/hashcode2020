@@ -1,5 +1,5 @@
 struct NopSolver: Solver {
     func solve(problem: Problem) -> Solution {
-        return Solution(indices: [])
+        return Solution(indices: [], solverWrapper: .init(solver: self))
     }
 }
