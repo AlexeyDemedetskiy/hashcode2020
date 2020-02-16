@@ -2,28 +2,38 @@
 func optimizeInOneStep(solution: Solution, for problem: Problem) throws -> Solution? {
     
     let score = try Scorer.score(for: problem, with: solution)
-    let originalLack = problem.maximumNumberOfSlices - score
-    var lack = originalLack
+    let lack = problem.maximumNumberOfSlices - score
     
     guard lack > 0 else { return nil }
     
-    let allIndices = Set(problem.pizzas.indices)
     let usedIndices = Set(solution.indices)
-    let unusedIndices = allIndices.subtracting(usedIndices)
     
-    var bestFix = nil as (remove: PizzaIndex, add: [PizzaIndex])?
+    var bestFix = nil as (lack: UInt64, remove: PizzaIndex, add: [PizzaIndex])?
     for used in usedIndices.sorted().reversed() {
-        let targetLack = originalLack + problem.pizzas[used].numberOfSlices
-        let newProblem = Problem(maximumNumberOfSlices: targetLack, pizzas: unusedIndices.sorted().map{ problem.pizzas[$0]})
-        let newSolution = try TailSolver().solve(problem: newProblem)
+        let targetLack = lack + problem.pizzas[used].numberOfSlices
+        
+        let newProblem = Problem(
+            maximumNumberOfSlices: targetLack,
+            pizzas: problem.pizzas
+        )
+        
+        let newSolution = try GreedySolver(denied: usedIndices).solve(problem: newProblem)
         let newScore = try Scorer.score(for: newProblem, with: newSolution)
+        
         let newLack = newProblem.maximumNumberOfSlices - newScore
         
-        if (newLack < lack) {
-            bestFix = (remove: used, add: newSolution.indices)
-            lack = newLack
+        guard newLack < lack else { continue }
+        
+        guard let fix = bestFix else {
+            bestFix = (lack: newLack, remove: used, add: newSolution.indices)
+            continue
         }
-        if (lack == 0) {
+        
+        guard newLack < fix.lack else { continue }
+        
+        bestFix = (lack: newLack, remove: used, add: newSolution.indices)
+        
+        if (newLack == 0) {
             break
         }
     }
@@ -38,8 +48,7 @@ func optimizeInOneStep(solution: Solution, for problem: Problem) throws -> Solut
     
     indices.sort()
     
-    let improved = Solution(indices: indices, name: #function, parent: solution)
-    let improvedScore = try Scorer.score(for: problem, with: improved)
+    let improved = Solution(indices: indices, name: "Optimized", parent: solution)
     return improved
 }
 
@@ -57,6 +66,4 @@ struct OptimizingSolver: Solver {
         
         return optimizedSolution
     }
-    
-    var name: String { "Optimizing(\(solver.name))" }
 }

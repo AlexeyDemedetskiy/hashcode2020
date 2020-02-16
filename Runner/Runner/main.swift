@@ -14,32 +14,35 @@ class Runner {
     let writer = Writer()
     // let parser
     
-    func run(problem: String, name: String, solver: Solver) throws {
-        print("Problem: \(name) with \(solver.name)")
-        let problem = try parse(problem)
-        let solution = try solver.solve(problem: problem)
-        let score = try Scorer.score(for: problem, with: solution)
+    func run(problem: String, name: String, solver: Solver) {
+        let start = CFAbsoluteTimeGetCurrent()
+        do {
+            print("Problem: \(name) with \(solver.name). ", terminator: "")
+            let problem = try parse(problem)
+            let solution = try solver.solve(problem: problem)
+            let score = try Scorer.score(for: problem, with: solution)
+            
+            try writer.write(
+                solution: solution.toString(),
+                solverName: solution.fullName,
+                score: score,
+                problemName: name)
+        }
+        catch {
+            print(error)
+        }
         
-        try writer.write(
-            solution: solution.toString(),
-            solverName: solution.fullName,
-            score: score,
-            problemName: name)
+        print("Time: ", CFAbsoluteTimeGetCurrent() - start)
     }
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            try run(problem: problem, name: name, solver: GreedyComposer())
-            try run(problem: problem, name: name, solver: TailSolverCompose())
+            run(problem: problem, name: name, solver: OptimizingSolver(solver: TailSolverCompose()))
+            run(problem: problem, name: name, solver: GreedyComposer())
+            run(problem: problem, name: name, solver: TailSolverCompose())
         }
     }
 }
 
 let runner = Runner()
-
-do {
-    try runner.run()
-} catch {
-    print(error)
-}
-
+try runner.run()
