@@ -26,7 +26,7 @@ struct TailSolverCompose: Solver {
             }
             
             guard bestScore < problem.maximumNumberOfSlices else {
-                return bestSolution
+                break
             }
             
             guard solution.indices.count < problem.pizzas.count - offset else {
@@ -34,6 +34,6 @@ struct TailSolverCompose: Solver {
             }
         }
         
-        return bestSolution
+        return Solution(indices: bestSolution.indices, name: name, parent: bestSolution)
     }
 }
