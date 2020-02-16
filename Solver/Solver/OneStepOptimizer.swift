@@ -45,7 +45,7 @@ func optimizeInOneStep(solution: Solution, for problem: Problem) throws -> Solut
        
        indices.sort()
        
-       return Solution(indices: indices, solverWrapper: solution.solverWrapper)
+        return Solution(indices: indices, name: #function, parent: solution)
    }
 
 struct OptimizingSolver: Solver {
@@ -57,7 +57,7 @@ struct OptimizingSolver: Solver {
             return originalSolution
         }
         
-        return optimizedSolution.wrap(solver: self)
+        return optimizedSolution
     }
     
     var name: String { "Optimizing(\(solver.name))" }

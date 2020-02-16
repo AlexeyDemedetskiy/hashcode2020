@@ -34,6 +34,6 @@ struct TailSolverCompose: Solver {
             }
         }
         
-        return bestSolution.wrap(solver: self)
+        return Solution(indices: bestSolution.indices, name: name, parent: bestSolution)
     }
 }

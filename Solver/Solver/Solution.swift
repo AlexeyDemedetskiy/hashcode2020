@@ -1,42 +1,19 @@
 typealias PizzaIndex = Int
 
 class Solution {
-    class SolverWrapper {
-        let wrapper: SolverWrapper?
-        let solver: Solver
-        
-        var name: String {
-            [solver.name, wrapper?.name].compactMap{ $0 }.joined(separator: "_")
-        }
-        
-        init(wrapper: SolverWrapper? = nil, solver: Solver) {
-            self.wrapper = wrapper
-            self.solver = solver
-        }
+    internal init(indices: [PizzaIndex], name: String, parent: Solution? = nil) {
+        self.indices = indices
+        self.name = name
+        self.parent = parent
     }
     
     let indices: [PizzaIndex]
-    let solverWrapper: SolverWrapper
+    let name: String
+    let parent: Solution?
     
-    var name: String {
-        solverWrapper.name
-    }
-    
-    init(indices: [PizzaIndex], solverWrapper: SolverWrapper) {
-        self.indices = indices
-        self.solverWrapper = solverWrapper
-    }
-    
-    func wrap(solver: Solver) -> Solution {
-        return Solution(indices: indices,
-                        solverWrapper: SolverWrapper(wrapper: solverWrapper,
-                                                     solver: solver))
-    }
-    
-    func wrap(solution: Solution) -> Solution {
-        return Solution(indices: solution.indices,
-                        solverWrapper: SolverWrapper(wrapper: solution.solverWrapper,
-                                                     solver: solution.solverWrapper.solver))
+    var fullName: String {
+        guard let parent = parent else { return name }
+        return "\(name)|>\(parent.name)"
     }
     
     func toString() -> String {

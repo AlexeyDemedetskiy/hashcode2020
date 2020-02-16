@@ -42,6 +42,6 @@ struct TailSolver: Solver {
             
             index -= 1;
         }
-        return Solution(indices: results.reversed(), solverWrapper: .init(solver: self))
+        return Solution(indices: results.reversed(), name: name)
     }
 }
