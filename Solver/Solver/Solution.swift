@@ -13,7 +13,7 @@ class Solution {
     
     var fullName: String {
         guard let parent = parent else { return name }
-        return "\(name)|>\(parent.name)"
+        return "\(name)|>\(parent.fullName)"
     }
     
     func toString() -> String {
