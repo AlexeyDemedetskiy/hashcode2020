@@ -8,19 +8,19 @@
       location = "group:Problems"
       name = "Problems">
       <FileRef
-         location = "group:e_also_big.in">
-      </FileRef>
-      <FileRef
-         location = "group:d_quite_big.in">
-      </FileRef>
-      <FileRef
-         location = "group:c_medium.in">
+         location = "group:a_example.in">
       </FileRef>
       <FileRef
          location = "group:b_small.in">
       </FileRef>
       <FileRef
-         location = "group:a_example.in">
+         location = "group:c_medium.in">
+      </FileRef>
+      <FileRef
+         location = "group:d_quite_big.in">
+      </FileRef>
+      <FileRef
+         location = "group:e_also_big.in">
       </FileRef>
    </Group>
    <FileRef

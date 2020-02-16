@@ -15,6 +15,7 @@ class Runner {
     // let parser
     
     func run(problem: String, name: String, solver: Solver) throws {
+        print("Problem: \(name) with \(solver.name)")
         let problem = try parse(problem)
         let solution = try solver.solve(problem: problem)
         let score = try Scorer.score(for: problem, with: solution)
@@ -28,9 +29,8 @@ class Runner {
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            try run(problem: problem, name: name, solver: HeadSolver())
+            try run(problem: problem, name: name, solver: GreedyComposer())
             try run(problem: problem, name: name, solver: TailSolverCompose())
-            try run(problem: problem, name: name, solver: OptimizingSolver(solver: TailSolverCompose()))
         }
     }
 }
