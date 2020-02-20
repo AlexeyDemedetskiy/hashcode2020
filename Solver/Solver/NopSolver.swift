@@ -1,5 +1,5 @@
 struct NopSolver: Solver {
     func solve(problem: Problem) -> Solution {
-        return Solution(submissions: [])
+        return Solution(submissions: [], tag: "NopSolver")
     }
 }

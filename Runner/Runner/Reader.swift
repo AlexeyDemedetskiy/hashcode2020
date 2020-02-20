@@ -15,7 +15,7 @@ struct Reader {
         let documentsUrl =  URL(fileURLWithPath: problemFolder, isDirectory: true)
         let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil)
         return try directoryContents
-            .filter { $0.pathExtension == "in" }
+            .filter { $0.pathExtension == "txt" }
             .map { ( problem: try String(contentsOf: $0, encoding: .utf8),
                      name: ($0.lastPathComponent as NSString).deletingPathExtension )}
     }

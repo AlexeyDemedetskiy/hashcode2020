@@ -2,8 +2,31 @@ struct LibraryIndex {
     let value: Int
 }
 
+class SolutionTag: ExpressibleByStringLiteral {
+    private let ownName: String
+    private let parent: SolutionTag?
+    
+    init(name: String, parent: SolutionTag? = nil) {
+        self.ownName = name
+        self.parent = parent
+    }
+    
+    var name: String {
+        guard let parentName = parent?.name else {
+            return ownName
+        }
+        
+        return "\(ownName)->\(parentName)"
+    }
+    
+    required init(stringLiteral value: String) {
+        ownName = value
+        parent = nil
+    }
+}
 struct Solution {
     let submissions: [Submission]
+    let tag: SolutionTag
 }
 
 struct Submission {

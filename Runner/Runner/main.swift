@@ -12,21 +12,20 @@ import Foundation
 class Runner {
     let reader = Reader()
     let writer = Writer()
-    // let parser
     
     func run(problem: String, name: String, solver: Solver) {
         let start = CFAbsoluteTimeGetCurrent()
         do {
-//            print("Problem: \(name) with \(solver.name). ", terminator: "")
-//            let problem = try parse(problem)
-//            let solution = try solver.solve(problem: problem)
-//            let score = try Scorer.score(for: problem, with: solution)
-//
-//            try writer.write(
-//                solution: solution.toString(),
-//                solverName: solution.fullName,
-//                score: score,
-//                problemName: name)
+            print("Problem: \(name) with \(solver.name). ", terminator: "")
+            let problem = try parse(problem)
+            let solution = try solver.solve(problem: problem)
+            let score = try Scorer.score(for: problem, with: solution)
+            
+            try writer.write(
+                solution: solution.asString,
+                solverName: solution.tag.name,
+                score: score,
+                problemName: name)
         }
         catch {
             print(error)
@@ -37,7 +36,7 @@ class Runner {
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            // TODO: Run solvers
+            run(problem: problem, name: name, solver: NopSolver())
         }
     }
 }
