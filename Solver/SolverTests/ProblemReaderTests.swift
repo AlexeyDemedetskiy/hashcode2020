@@ -12,26 +12,18 @@ import XCTest
 class ProblemReaderTests: XCTestCase {
     func testSimple() throws {
         let input = """
-        17 4
-        2 5 6 8
+        6 2 7
+        1 2 3 6 5 4
+        5 2 2
+        0 1 2 3 4
+        4 3 1
+        0 2 3 5
         """
         let sut = try parse(input)
-        XCTAssertEqual(sut.maximumNumberOfSlices, 17)
-        XCTAssertEqual(sut.pizzas[0].numberOfSlices, 2)
-        XCTAssertEqual(sut.pizzas[1].numberOfSlices, 5)
-        XCTAssertEqual(sut.pizzas[2].numberOfSlices, 6)
-        XCTAssertEqual(sut.pizzas[3].numberOfSlices, 8)
-        XCTAssertEqual(sut.pizzas.count, 4)
     }
     
     func testBig() throws {
         self.measure {
-            let bundle = Bundle(for: type(of: self))
-            guard let path = bundle.path(forResource: "e_also_big", ofType: "in") else { XCTFail(); return }
-            let input = try! String(contentsOfFile: path, encoding: .utf8)
-            let sut = try! parse(input)
-            XCTAssertEqual(sut.maximumNumberOfSlices, 505000000)
-            XCTAssertEqual(sut.pizzas.count, 10000)
         }        
     }
 }

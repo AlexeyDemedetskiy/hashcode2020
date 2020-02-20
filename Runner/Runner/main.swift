@@ -37,9 +37,7 @@ class Runner {
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            run(problem: problem, name: name, solver: OptimizingSolver(solver: TailSolverCompose()))
-            run(problem: problem, name: name, solver: GreedyComposer())
-            run(problem: problem, name: name, solver: TailSolverCompose())
+            // TODO: Run solvers
         }
     }
 }

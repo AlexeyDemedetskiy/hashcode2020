@@ -4,27 +4,11 @@
    <FileRef
       location = "group:Solutions">
    </FileRef>
-   <Group
-      location = "group:Problems"
-      name = "Problems">
-      <FileRef
-         location = "group:a_example.in">
-      </FileRef>
-      <FileRef
-         location = "group:b_small.in">
-      </FileRef>
-      <FileRef
-         location = "group:c_medium.in">
-      </FileRef>
-      <FileRef
-         location = "group:d_quite_big.in">
-      </FileRef>
-      <FileRef
-         location = "group:e_also_big.in">
-      </FileRef>
-   </Group>
    <FileRef
-      location = "group:practice_problem.pdf">
+      location = "group:hashcode_2020_online_qualification_round.pdf">
+   </FileRef>
+   <FileRef
+      location = "group:Problems">
    </FileRef>
    <FileRef
       location = "group:Runner/../Solver/Solver.xcodeproj">

@@ -1,30 +1,28 @@
-//
-//  ProblemReader.swift
-//  Solver
-//
-//  Created by amoskvin on 2/8/20.
-//  Copyright © 2020 Genesis. All rights reserved.
-//
-
 import Foundation
 
+struct BookIndex {
+    let value: Int
+}
+
 struct Problem {
-    let maximumNumberOfSlices: UInt64
-    let pizzas: [Pizza]
+    let books: [Book]
+    let libraries: [Library]
+    let days: Int
 }
 
-struct Pizza {
-    let numberOfSlices: UInt64
+struct Book {
+    let score: Int
 }
 
+struct Library {
+    let signup: Int
+    let booksPerDay: Int
+    let books: [BookIndex] // Indexes
+}
 
 func parse(_ input: String) throws -> Problem {
     let lines = input.components(separatedBy: .newlines)
     let defs = lines[0].components(separatedBy: .whitespaces)
-    let pizzas = lines[1].components(separatedBy: .whitespaces)
-
-    guard pizzas.count == UInt(defs[1])! else { fatalError() }
-    
-    return Problem(maximumNumberOfSlices: UInt64(defs[0])!,
-                   pizzas: pizzas.map({ e in return Pizza(numberOfSlices: UInt64(e)!) }))
+        
+    throw NSError()
 }
