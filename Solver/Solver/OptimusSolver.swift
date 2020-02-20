@@ -3,15 +3,19 @@ public struct OptimusSolver: Solver {
     public func solve(problem: Problem) throws -> Solution {
         var daysLeft = problem.days
         var processedBooks = [] as Set<BookIndex>
+        var leftLibraries = Set(problem.libraries.map { $0.index })
         
         var libraryScores = [:] as [LibraryIndex: (score: Int, books: ArraySlice<BookIndex>)]
         
         func score(_ libraryIndex: LibraryIndex) {
             let library = problem.libraries[libraryIndex.value]
             let usefullDays = daysLeft - library.signup
-            guard usefullDays > 0 else { return }
+            guard usefullDays > 0 else {
+                leftLibraries.remove(libraryIndex)
+                return
+            }
             
-            let booksToProcess = Set(library.books).subtracting(processedBooks).sorted {
+            let booksToProcess = library.books.filter { !processedBooks.contains($0) }.sorted {
                 problem.books[$0.value].score > problem.books[$1.value].score
             }
             
@@ -19,6 +23,7 @@ public struct OptimusSolver: Solver {
             let usefullBooks = booksToProcess[0..<maxProcessedBooks]
             
             if usefullBooks.isEmpty {
+                leftLibraries.remove(libraryIndex)
                 return
             }
             
@@ -29,7 +34,6 @@ public struct OptimusSolver: Solver {
         }
         
         var solution = Solution(submissions: [], tag: "Optimus")
-        var leftLibraries = Set(problem.libraries.map { $0.index })
         
         while(true) {
             libraryScores = [:]
@@ -58,6 +62,7 @@ public struct OptimusSolver: Solver {
             leftLibraries.remove(topLibrary)
             
             guard daysLeft > 0 else { break }
+            print("Days left:", daysLeft, "Libraries:", leftLibraries.count)
         }
         
         return solution
