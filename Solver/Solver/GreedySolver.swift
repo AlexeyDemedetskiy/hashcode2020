@@ -16,7 +16,7 @@ struct GreedySolver: Solver {
         }
     
         
-        return Solution(submissions: submissions)
+        return Solution(submissions: submissions, tag: "GreedySolver")
     }
 }
 

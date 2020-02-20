@@ -36,7 +36,7 @@ class Runner {
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            run(problem: problem, name: name, solver: NopSolver())
+            run(problem: problem, name: name, solver: GreedySolver())
         }
     }
 }
