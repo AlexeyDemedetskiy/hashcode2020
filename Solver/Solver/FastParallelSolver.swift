@@ -1,8 +1,7 @@
-struct FastParallelSolver: Solver {
+public struct FastParallelSolver: Solver {
+    public init() {}
     
-//    var name: String { "GrredySolver(\(denied))" }
-    
-    func solve(problem: Problem) throws -> Solution {
+    public func solve(problem: Problem) throws -> Solution {
         var submissions = [Submission]()
         
         let sorted = problem.libraries.sorted { (l1, l2) -> Bool in

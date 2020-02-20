@@ -1,5 +1,7 @@
-struct MetricsSolver: Solver {
-    func solve(problem: Problem) -> Solution {
+public struct MetricsSolver: Solver {
+    public init() {}
+    
+    public func solve(problem: Problem) -> Solution {
         var submissions = [Submission]()
         let sorted = problem.libraries.sorted { (l1, l2) -> Bool in
             // XCODE CERASHES WHEN I TRY TO USE REDUCE <3 VLAD ANOKHIN

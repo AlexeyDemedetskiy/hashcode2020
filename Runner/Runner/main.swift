@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import Solver
+import Solver
 
 class Runner {
     let reader = Reader()

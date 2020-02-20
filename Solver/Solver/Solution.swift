@@ -1,8 +1,8 @@
-struct LibraryIndex: Hashable {
+public struct LibraryIndex: Hashable {
     let value: Int
 }
 
-class SolutionTag: ExpressibleByStringLiteral {
+public class SolutionTag: ExpressibleByStringLiteral {
     private let ownName: String
     private let parent: SolutionTag?
     
@@ -11,7 +11,7 @@ class SolutionTag: ExpressibleByStringLiteral {
         self.parent = parent
     }
     
-    var name: String {
+    public var name: String {
         guard let parentName = parent?.name else {
             return ownName
         }
@@ -19,23 +19,23 @@ class SolutionTag: ExpressibleByStringLiteral {
         return "\(ownName)->\(parentName)"
     }
     
-    required init(stringLiteral value: String) {
+    public required init(stringLiteral value: String) {
         ownName = value
         parent = nil
     }
 }
-struct Solution {
+public struct Solution {
     var submissions: [Submission]
-    let tag: SolutionTag
+    public let tag: SolutionTag
 }
 
-struct Submission {
+public struct Submission {
     let library: LibraryIndex
     let books: [BookIndex]
 }
 
 extension Solution {
-    var asString: String {
+    public var asString: String {
         var result = ""
         
         result.append("\(submissions.count)\n")

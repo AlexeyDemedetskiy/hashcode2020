@@ -1,7 +1,5 @@
-struct Scorer {
-    struct SolutionOverflow: Error {}
-    
-    static func score(for problem: Problem, with solution: Solution) throws -> Int {
+public struct Scorer {
+    public static func score(for problem: Problem, with solution: Solution) throws -> Int {
         var startDay = 0
         var startTimes = [] as [Int]
         for submission in solution.submissions {

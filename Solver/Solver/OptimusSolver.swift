@@ -1,5 +1,6 @@
-struct OptimusSolver: Solver {
-    func solve(problem: Problem) throws -> Solution {
+public struct OptimusSolver: Solver {
+    public init() {}
+    public func solve(problem: Problem) throws -> Solution {
         var daysLeft = problem.days
         var processedBooks = [] as Set<BookIndex>
         

@@ -1,10 +1,9 @@
-protocol Solver {
-    var name: String { get }
+public protocol Solver {
     func solve(problem: Problem) throws -> Solution
 }
 
 extension Solver {
-    var name: String {
+    public var name: String {
         String(describing: Self.self)
     }
 }

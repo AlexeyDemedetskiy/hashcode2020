@@ -1,28 +1,28 @@
 import Foundation
 
-struct BookIndex: Hashable {
+public struct BookIndex: Hashable {
     let value: Int
 }
 
-struct Problem {
+public struct Problem {
     let books: [Book]
     let libraries: [Library]
     let days: Int
 }
 
-struct Book {
+public struct Book {
     let index: BookIndex
     let score: Int
 }
 
-struct Library {
+public struct Library {
     let index: LibraryIndex
     let signup: Int
     let booksPerDay: Int
     let books: [BookIndex] // Indexes
 }
 
-func parse(_ input: String) throws -> Problem {
+public func parse(_ input: String) throws -> Problem {
     var lines = input.components(separatedBy: .newlines)
     var generalInfo = lines.removeFirst().components(separatedBy: .whitespaces)
     
