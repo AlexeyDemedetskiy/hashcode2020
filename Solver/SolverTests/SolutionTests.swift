@@ -12,7 +12,7 @@ class SolutionTests: XCTestCase {
             Submission(
                 library: LibraryIndex(value: 0),
                 books: [0, 1, 2, 3, 4].map(BookIndex.init))
-        ])
+        ], tag: "TrivialSolution")
         
         let result =
         """
@@ -39,7 +39,19 @@ class SolutionTests: XCTestCase {
         """
         let sut = try parse(input)
         let solution = try solver.solve(problem: sut)
-        
     }
 
+    func testFastParallelSolver() throws {
+        let solver = FastParallelSolver()
+        let input = """
+        6 2 7
+        1 2 3 6 5 4
+        5 2 2
+        0 1 2 3 4
+        4 3 1
+        0 2 3 5
+        """
+        let sut = try parse(input)
+        let solution = try solver.solve(problem: sut)
+    }
 }
