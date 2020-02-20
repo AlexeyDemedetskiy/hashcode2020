@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07129B4223FF100000B56BA7 /* FastParallelSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07129B4123FF100000B56BA7 /* FastParallelSolver.swift */; };
+		07129B4823FF2C2100B56BA7 /* FastParallelOptimizedSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07129B4723FF2C2100B56BA7 /* FastParallelOptimizedSolver.swift */; };
 		0724736723EF13B7008F2C69 /* SkipedReviewerSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0724736623EF13B7008F2C69 /* SkipedReviewerSolver.swift */; };
 		50346ADF23EEE233003F849B /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50346ADE23EEE233003F849B /* Problem.swift */; };
 		50346AE123EEE335003F849B /* ProblemReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50346AE023EEE335003F849B /* ProblemReaderTests.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		07129B4123FF100000B56BA7 /* FastParallelSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastParallelSolver.swift; sourceTree = "<group>"; };
+		07129B4723FF2C2100B56BA7 /* FastParallelOptimizedSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastParallelOptimizedSolver.swift; sourceTree = "<group>"; };
 		0724736623EF13B7008F2C69 /* SkipedReviewerSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipedReviewerSolver.swift; sourceTree = "<group>"; };
 		50346ADE23EEE233003F849B /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		50346AE023EEE335003F849B /* ProblemReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemReaderTests.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				E2CE035623EF0EF20001608F /* TailSolverCompose.swift */,
 				07129B4123FF100000B56BA7 /* FastParallelSolver.swift */,
 				DE2AD89E23FF1B2000F814FF /* OptimusSolver.swift */,
+				07129B4723FF2C2100B56BA7 /* FastParallelOptimizedSolver.swift */,
 			);
 			path = Solver;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				DE1AAFE523EEE256007980CF /* Solution.swift in Sources */,
 				07129B4223FF100000B56BA7 /* FastParallelSolver.swift in Sources */,
 				DE1AAFF123EEEFFC007980CF /* Scorer.swift in Sources */,
+				07129B4823FF2C2100B56BA7 /* FastParallelOptimizedSolver.swift in Sources */,
 				50346ADF23EEE233003F849B /* Problem.swift in Sources */,
 				E2CE035723EF0EF20001608F /* TailSolverCompose.swift in Sources */,
 				DEF9E99323F9767000258EA8 /* GreedySolver.swift in Sources */,

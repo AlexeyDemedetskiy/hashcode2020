@@ -36,9 +36,10 @@ class Runner {
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            run(problem: problem, name: name, solver: MetricsSolver())
+//            run(problem: problem, name: name, solver: MetricsSolver())
             run(problem: problem, name: name, solver: FastParallelSolver())
-            run(problem: problem, name: name, solver: OptimusSolver())
+//            run(problem: problem, name: name, solver: OptimusSolver())
+            run(problem: problem, name: name, solver: FastParallelOptimizedSolver())
         }
     }
 }
