@@ -5,7 +5,7 @@ public struct OptimusSolver: Solver {
         var processedBooks = [] as Set<BookIndex>
         var leftLibraries = Set(problem.libraries.map { $0.index })
         
-        var libraryScores = [:] as [LibraryIndex: (score: Int, books: ArraySlice<BookIndex>)]
+        var libraryScores = [:] as [LibraryIndex: (score: Float, books: ArraySlice<BookIndex>)]
         
         func score(_ libraryIndex: LibraryIndex) {
             let library = problem.libraries[libraryIndex.value]
@@ -30,7 +30,7 @@ public struct OptimusSolver: Solver {
             let bookScores = usefullBooks.map { problem.books[$0.value].score }
             let score =  bookScores.reduce(0, +)
             
-            libraryScores[libraryIndex] = (score, usefullBooks)
+            libraryScores[libraryIndex] = (Float(score) / Float(library.signup), usefullBooks)
         }
         
         var solution = Solution(submissions: [], tag: "Optimus")

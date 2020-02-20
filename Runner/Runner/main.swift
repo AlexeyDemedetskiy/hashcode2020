@@ -36,7 +36,7 @@ class Runner {
     
     func run() throws {
         for (problem, name) in try reader.read() {
-            if name.first == "d" { continue }
+            guard name.first == "d" else { continue }
             run(problem: problem, name: name, solver: MetricsSolver())
             run(problem: problem, name: name, solver: FastParallelSolver())
             run(problem: problem, name: name, solver: OptimusSolver())
