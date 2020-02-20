@@ -1,6 +1,6 @@
 import Foundation
 
-struct BookIndex {
+struct BookIndex: Hashable {
     let value: Int
 }
 
