@@ -24,6 +24,5 @@ class ProblemReaderTests: XCTestCase {
         XCTAssertEqual(6, sut.books.count)
         XCTAssertEqual(2, sut.libraries.count)
         XCTAssertEqual(7, sut.days)
-
     }
 }

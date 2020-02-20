@@ -2,43 +2,28 @@ import XCTest
 @testable import Solver
 
 class SolutionTests: XCTestCase {
-//    func testTrivail() {
-//        let solution = Solution(indices: [
-//            0, 2, 3
-//        ])
-//        
-//        let result =
-//        """
-//        3
-//        0 2 3
-//        """
-//        
-//        XCTAssertEqual(solution.toString(), result)
-//    }
-//    
-//    func testEmptySolution() {
-//        let solution = Solution(indices: [
-//            
-//        ])
-//        
-//        let result =
-//        """
-//        0
-//
-//        """
-//        
-//        XCTAssertEqual(solution.toString(), result)
-//    }
-//    
-//    func testPerformanceExample() {
-//        self.measure {
-//            let range = ClosedRange<PizzaIndex>(uncheckedBounds: (0, 100000 - 1))
-//            XCTAssertEqual(range.count, 100000)
-//            
-//            let solution = Solution(indices: Array(range))
-//            let _ = solution.toString()
-//            
-//        }
-//    }
+    func testTrivail() {
+        let solution = Solution(submissions: [
+            Submission(
+                library: LibraryIndex(value: 1),
+                books: [5, 2, 3].map(BookIndex.init)
+            ),
+            Submission(
+                library: LibraryIndex(value: 0),
+                books: [0, 1, 2, 3, 4].map(BookIndex.init))
+        ])
+        
+        let result =
+        """
+        2
+        1 3
+        5 2 3
+        0 5
+        0 1 2 3 4
+
+        """
+        
+        XCTAssertEqual(solution.asString, result)
+    }
 
 }
