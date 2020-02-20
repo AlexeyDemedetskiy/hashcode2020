@@ -20,10 +20,10 @@ class ProblemReaderTests: XCTestCase {
         0 2 3 5
         """
         let sut = try parse(input)
-    }
-    
-    func testBig() throws {
-        self.measure {
-        }        
+        
+        XCTAssertEqual(6, sut.books.count)
+        XCTAssertEqual(2, sut.libraries.count)
+        XCTAssertEqual(7, sut.days)
+
     }
 }
