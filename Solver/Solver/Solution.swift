@@ -1,4 +1,4 @@
-struct LibraryIndex {
+struct LibraryIndex: Hashable {
     let value: Int
 }
 
@@ -25,7 +25,7 @@ class SolutionTag: ExpressibleByStringLiteral {
     }
 }
 struct Solution {
-    let submissions: [Submission]
+    var submissions: [Submission]
     let tag: SolutionTag
 }
 
